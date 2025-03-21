@@ -1,3 +1,4 @@
+console.log("ciao")
 class Gnomes {
   constructor(_name, _brand, _description, _price, _imageUrl) {
     this.name = _name
@@ -52,7 +53,7 @@ form.addEventListener("submit", function (e) {
     imageUrlInput.value
   )
 
-  console.log("gnomesT", gnomes)
+  console.log("gnomes", gnomes)
 
   let methodToUse
   let URLtoUse
