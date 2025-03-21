@@ -29,13 +29,15 @@ const getGnomes = function () {
           `
           <div class="col col-12 col-lg-3 col-md-4 col-sm-6">
             <div class="card">
-              <img src="https://m.media-amazon.com/images/I/71+-eWy54ML.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">${gnomes.name}</h5>
-                <h5 class="card-title">${gnomes.brand}</h5>
-                <p class="card-text">${gnomes.description}</p>
-                <p class="card-text">${gnomes.price}€</p>
-                <a href="./details.html?id=${gnomes._id}" class="btn btn-primary">Vai ai dettagli</a>
+              <img src="${gnomes.imageUrl}" class="card-img-top" alt="..." />
+              <div class="card-body color">
+                <h5 class="card-title text-white text-center">${gnomes.name}</h5>                
+                <div class="text-center">
+                <p class="card-title text-white">${gnomes.brand}</p>
+                <p class="card-text text-white">${gnomes.description}</p>
+                <p class="card-text text-white">${gnomes.price}€</p>
+                <a href="./details.html?id=${gnomes._id}" class="btn color text-white border-white">Vai ai dettagli</a>
+                </div>
               </div>
             </div>
           </div>
