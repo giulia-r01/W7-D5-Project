@@ -29,7 +29,7 @@ const getGnomes = function () {
           `
           <div class="col col-12 col-lg-3 col-md-4 col-sm-6">
             <div class="card">
-              <img src="${gnomes.imageUrl}" class="card-img-top" alt="..." />
+              <img src="https://m.media-amazon.com/images/I/71+-eWy54ML.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">${gnomes.name}</h5>
                 <h5 class="card-title">${gnomes.brand}</h5>
