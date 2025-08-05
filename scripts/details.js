@@ -2,7 +2,7 @@ const URLparamiters = new URLSearchParams(location.search)
 const gnomesId = URLparamiters.get("id")
 const gnomesURL = "https://striveschool-api.herokuapp.com/api/product/"
 const authorization =
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWU5YTM4MzRiZjAwMTUwMDA2ZjEiLCJpYXQiOjE3NDI1NDQ1MzgsImV4cCI6MTc0Mzc1NDEzOH0.MCjLEIsOnQhKhOBwntExpjKRn-57M0BG-22BDq82Rw8"
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWU5YTM4MzRiZjAwMTUwMDA2ZjEiLCJpYXQiOjE3NTQ0MDYwOTQsImV4cCI6MTc1NTYxNTY5NH0.XSk3iqiM8QTPg84LIhFpZsVFk5pG6coluPyDQBbFeMk"
 const getGnomesDetails = function () {
   fetch(gnomesURL + gnomesId, {
     headers: {
@@ -25,11 +25,11 @@ const getGnomesDetails = function () {
       const price = document.getElementById("price")
       const imageUrl = document.getElementById("imageUrl")
 
-      name.innerText = data.name
-      brand.innerText = data.brand
-      description.innerText = data.description
-      price.innerText = data.price
-      imageUrl.innerText = data.imageUrl
+      name.innerText = "Nome: " + data.name
+      brand.innerText = "Brand: " + data.brand
+      description.innerText = "Descrizione: " + data.description
+      price.innerText = "Prezzo: " + data.price + " €"
+      imageUrl.src = data.imageUrl
     })
     .catch((error) => {
       console.log("Errore", error)

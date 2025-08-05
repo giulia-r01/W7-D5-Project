@@ -6,7 +6,7 @@ const hideSpinner = function () {
 const getGnomes = function () {
   const gnomesURL = "https://striveschool-api.herokuapp.com/api/product/"
   const authorization =
-    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWU5YTM4MzRiZjAwMTUwMDA2ZjEiLCJpYXQiOjE3NDI1NDQ1MzgsImV4cCI6MTc0Mzc1NDEzOH0.MCjLEIsOnQhKhOBwntExpjKRn-57M0BG-22BDq82Rw8"
+    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWU5YTM4MzRiZjAwMTUwMDA2ZjEiLCJpYXQiOjE3NTQ0MDYwOTQsImV4cCI6MTc1NTYxNTY5NH0.XSk3iqiM8QTPg84LIhFpZsVFk5pG6coluPyDQBbFeMk"
   fetch(gnomesURL, {
     headers: { Authorization: authorization },
   })
@@ -27,20 +27,21 @@ const getGnomes = function () {
         row.innerHTML =
           row.innerHTML +
           `
-          <div class="col col-12 col-lg-3 col-md-4 col-sm-6">
-            <div class="card">
-              <img src="${gnomes.imageUrl}" class="card-img-top" alt="..." />
-              <div class="card-body color">
-                <h5 class="card-title text-white text-center">${gnomes.name}</h5>                
-                <div class="text-center">
-                <p class="card-title text-white">${gnomes.brand}</p>
-                <p class="card-text text-white">${gnomes.description}</p>
-                <p class="card-text text-white">${gnomes.price}€</p>
-                <a href="./details.html?id=${gnomes._id}" class="btn color text-white border-white">Vai ai dettagli</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col col-12 col-lg-3 col-md-4 col-sm-6 d-flex">
+  <div class="card h-100 d-flex flex-column">
+    <img src="${gnomes.imageUrl}" class="card-img-top fixed-img" alt="..." />
+    <div class="card-body color d-flex flex-column justify-content-between">
+      <h5 class="card-title text-white text-center">${gnomes.name}</h5>
+      <div class="text-center">
+        <p class="card-title text-white">${gnomes.brand}</p>
+        <p class="card-text text-white">${gnomes.description}</p>
+        <p class="card-text text-white">${gnomes.price}€</p>
+        <a href="./details.html?id=${gnomes._id}" class="btn color text-white border-white">Vai ai dettagli</a>
+      </div>
+    </div>
+  </div>
+</div>
+
         `
       })
     })

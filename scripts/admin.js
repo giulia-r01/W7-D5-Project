@@ -20,7 +20,7 @@ const imageUrlInput = document.getElementById("imageUrl")
 
 const gnomesURL = "https://striveschool-api.herokuapp.com/api/product/"
 const authorization =
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWU5YTM4MzRiZjAwMTUwMDA2ZjEiLCJpYXQiOjE3NDI1NDQ1MzgsImV4cCI6MTc0Mzc1NDEzOH0.MCjLEIsOnQhKhOBwntExpjKRn-57M0BG-22BDq82Rw8"
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWU5YTM4MzRiZjAwMTUwMDA2ZjEiLCJpYXQiOjE3NTQ0MDYwOTQsImV4cCI6MTc1NTYxNTY5NH0.XSk3iqiM8QTPg84LIhFpZsVFk5pG6coluPyDQBbFeMk"
 
 if (gnomesId) {
   fetch(gnomesURL + gnomesId, { headers: { Authorization: authorization } })
